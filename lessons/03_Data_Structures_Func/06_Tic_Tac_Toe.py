@@ -6,28 +6,41 @@ O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
-
+    
 def check_row(l):
-    """Check if a player won on a row
+    """Check if a player won on 
     Args:
         l: a 3 element iterable
         
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
+    if l[0] == l[1] and l[1] == l[2]:
+        return l[0]
+    if l[3] == l[4] and l[4] == l[5]:
+        return l[3]
+    if l[6] == l[7] and l[7] == l[8]:
+        return l[6]
+        
+    
+        return None
 
-    return None
 
 def check_win(board):
     """Check if a player has won on a board
     Args:
-        board: a 3x3 2D array
+        b
+
+
+
+    
+        
     
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
-
-    return None
+        
+    return check_row(board)
 
 # The following code is the main part of the program. It creates a GUI for the
 # game and handles the game logic. Implement the functions above first, then
@@ -105,3 +118,4 @@ class TicTacToe:
 
 ttt = TicTacToe(check_win)
 ttt.start()
+check_row(ttt.buttons[0][0::])
