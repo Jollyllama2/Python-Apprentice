@@ -8,7 +8,7 @@ import random
 
 "make Boolean """
 
-rooms = [1,2,3,4,5,6,7]
+rooms = [1,2,3,4,5,6,7,8,9,10]
 
 hotel = { }
 
@@ -21,20 +21,24 @@ def check_in():
                name =  simpledialog.askstring(title= 'hi', prompt = ' whats your name')
                hotel[room] = name  
                break 
-
 def check_out(name):
      for room, n in hotel.items() :
           if name == n:
                hotel[room] = ''
 
 if __name__ == '__main__':
-     simpledialog.askstring(title= 'hello', prompt = ' Do you want to check in or ceheck out  ')
+     simpledialog.askstring(title= 'hello', prompt = ' Do you want to check in or check out. ')
      if all(not names for names in hotel.values()):
           check_in()
      else:
           messagebox.showinfo(title= '', message =  ' there are no availble rooms')
+     if "check out":
+          check_out() 
 
-             
+     
+
+
+          
 
           
 
